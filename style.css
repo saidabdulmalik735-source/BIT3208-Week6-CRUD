@@ -1,0 +1,269 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    color: white;
+    padding: 40px 0;
+}
+.header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+.header p { font-size: 1.1rem; opacity: 0.9; }
+
+/* Navigation */
+.nav {
+    background: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.nav-links { display: flex; gap: 15px; flex-wrap: wrap; }
+.nav-links a {
+    text-decoration: none;
+    color: #ee5a24;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+.nav-links a:hover, .nav-links a.active {
+    background: #ee5a24;
+    color: white;
+}
+.user-info { display: flex; align-items: center; gap: 15px; }
+.user-name { font-weight: 600; color: #2c3e50; }
+.logout-btn {
+    background: #ee5a24;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    margin-bottom: 30px;
+}
+
+/* Search Bar */
+.search-section {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.search-input {
+    flex: 1;
+    min-width: 250px;
+    padding: 12px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+.search-input:focus {
+    outline: none;
+    border-color: #ee5a24;
+}
+.search-btn {
+    padding: 12px 25px;
+    background: #ee5a24;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Stats */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.stat-number { font-size: 2.2rem; font-weight: bold; color: #ee5a24; }
+.stat-label { color: #7f8c8d; margin-top: 5px; font-size: 0.9rem; }
+
+/* Table */
+.crud-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+.crud-table th {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+.crud-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.crud-table tr:hover { background: #fff5f2; }
+.salary { color: #27ae60; font-weight: bold; }
+
+/* Badges */
+.badge {
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.badge-it { background: #e3f2fd; color: #1565c0; }
+.badge-hr { background: #f3e5f5; color: #7b1fa2; }
+.badge-finance { background: #e8f5e9; color: #2e7d32; }
+.badge-marketing { background: #fff3e0; color: #ef6c00; }
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn-primary { background: #ee5a24; color: white; }
+.btn-primary:hover { background: #d35400; }
+.btn-success { background: #27ae60; color: white; }
+.btn-success:hover { background: #219a52; }
+.btn-warning { background: #f39c12; color: white; }
+.btn-warning:hover { background: #e67e22; }
+.btn-danger { background: #e74c3c; color: white; }
+.btn-danger:hover { background: #c0392b; }
+.btn-small { padding: 6px 14px; font-size: 0.85rem; margin-right: 5px; }
+
+/* Forms */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.form-group { margin-bottom: 20px; }
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #ee5a24;
+}
+input.error { border-color: #e74c3c; background: #fdf2f2; }
+.error-msg {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: none;
+}
+.error-msg.show { display: block; }
+
+/* Login */
+.login-container {
+    max-width: 400px;
+    margin: 60px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+}
+.login-logo {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* Messages */
+.status {
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.status.success { background: #d4edda; color: #155724; }
+.status.error { background: #f8d7da; color: #721c24; }
+.status.info { background: #d1ecf1; color: #0c5460; }
+
+/* Access denied */
+.access-denied {
+    text-align: center;
+    padding: 80px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: 50px auto;
+}
+.access-denied h2 { color: #e74c3c; font-size: 2.5rem; margin-bottom: 15px; }
+
+/* Empty state */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #7f8c8d;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    color: white;
+    opacity: 0.8;
+    padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav { flex-direction: column; }
+    .search-section { flex-direction: column; }
+    .search-input { width: 100%; }
+    .crud-table { font-size: 0.85rem; }
+    .crud-table th, .crud-table td { padding: 10px; }
+    .btn-small { padding: 4px 10px; font-size: 0.75rem; }
+}
